@@ -1,0 +1,29 @@
+x 1. Read from file 
+x2. Add words from file into memory (start from location 1000)
+?3. Count enough 6 dot (ASCII = 46)
+x4. Display on screen
+x5. Ask user for an input word
+x5a. Add word to find into memory (start from location 12)
+
+6. Perform searching for the word
+memory location 10: word number in the sentence, denote: wrdNum=1
+memory location 11: sentence number, denote stnNum=1
+loop: from location 1000 to end location of paragraph(known: 1501), denote i
+		Load from memory at location i into R0{
+			if R0 = '.'
+				stnNum++;
+				wrdNum=1;
+			if R0 = ' '
+				wrdNum++;
+				
+			from location 12 to end location of word to find, denote j{
+				if R0.equals(content at j)
+					j++;
+				else if j = end location of word to find
+									found it
+				else break;
+				}								
+		}
+		
+							
+7. If found, print the word, the sentence number and the word number in the sentence.

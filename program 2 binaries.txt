@@ -1,0 +1,55 @@
+Program 2:
+//Loop through this to find word we need
+0000010100001001 //Load into register R1 from [9]
+0001010100010111 //Compare R1 with WL
+0010100100011011 //Jump if jero
+0000011100001000 //Compare char in paragraph so far
+0001011100011000 //SMR (subtract memory [24] from register R3, store into R3)
+0010101100011100 //JZ
+1010010001001000 //Load Into index register X1 from [8]
+0000010001100000 //Load into register R0 from memory [[X1]]
+0001010000001100 //SMR (subtract memory [12] from register R0, store into R0)
+0010100000001110 //JZ
+0000010001100000 //Load into register R0 from memory [[X1]]
+0001010000001101 //SMR (subtract memory [13] from register R0, store into R0)
+0010100000001111 //JZ
+0000010001100000 //Load into register R0 from memory [[X1]]
+0000100000011001 //Store R0 into memory [25]
+0000010100001001 //Load into register R1 from [9]
+0001010100011001 //SMR
+0010100100010000 //JZ
+0011010000010001 //JMA
+		
+//Vector to address 60
+//When current char is a period, ASCII = 46
+0000011000010110
+0000101000001010
+0001001000001011
+0000101000001011
+0011010000010101
+		
+//Vector to address 70
+//When current char is a sapce, ASCII = 32
+0000011000010110
+0001001000001010
+0000101000001010
+0011010000010101
+		
+//Vector to address 80
+//When 2 char match
+0000011000010110
+0001001000001000
+0000101000001000
+0000011000010110
+0001001000001001
+0000101000001001
+0011010000010100
+		
+//Vector to address 90
+//Just increment
+0000011000010110
+0001001000001000
+0000101000001000
+0000011000000111
+0000101000001001
+0011010000010100
