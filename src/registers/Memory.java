@@ -1,7 +1,13 @@
 package registers;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Scanner;
 
 import instructions.UnitConverter;
 import registers.Cache.CacheLine;
@@ -67,10 +73,48 @@ public class Memory {
 
 	}
 	
+	public void initializeMemory2() {
+		try {
+			//FileReader file = new FileReader("program2Paragraph");
+			FileReader file = new FileReader("memory.txt");
+			Scanner scanner = new Scanner(file);
+			int i =0;
+			while(scanner.hasNextLine()) {
+				String line = scanner.nextLine();
+				memory.put(i, line);
+				i++;
+			}
+			scanner.close();
+		} catch(IOException exception) {
+			exception.printStackTrace();
+		}
+	}
 	
+	public void initializeMemory() {
+		  try {
+	    	  InputStream is = getClass().getResourceAsStream("memory");
+	    	    InputStreamReader isr = new InputStreamReader(is);
+	    	    BufferedReader br = new BufferedReader(isr);
+	    	    String line;
+	    	    int i =0;
+	    	    while ((line = br.readLine()) != null) 
+	    	    {
+	    	    	memory.put(i, line);
+					i++;
+	    	    }
+	    	    br.close();
+	    	    isr.close();
+	    	    is.close();
+	         } 
+	        // i.close();
+	       catch(Exception e) {
+	         System.out.println(e);
+	      }
+	      
+	}
 	//Initilaize memory to 0
 	/*
-	public Memory() {
+	public void initializeMemory() {
 	if(memory == null) {
 		memory = new HashMap<>();
 	}

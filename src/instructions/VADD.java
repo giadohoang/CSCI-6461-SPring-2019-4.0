@@ -13,9 +13,9 @@ public class VADD extends Instructions{
 		fr = instruction.substring(6,8);
 		ix = instruction.substring(8,10);
 		address = instruction.substring(11);
-	
+		i = instruction.substring(8, 9); 
 		String effectiveAddress = instructions.ComputingEffectiveAddress.computeEffectiveAddress(i, ix, address, register,memory);
-		int vectorLength = Integer.parseInt(register.getFloatingRegisterj(fr));
+		int vectorLength = UnitConverter.binaryStringToInteger(register.getFloatingRegisterj(fr));
 		if(!i.equals("1")) {
 			vector1Address = UnitConverter.binaryStringToInteger(memory.getFromMemory(UnitConverter.binaryStringToInteger(effectiveAddress)));
 			
@@ -28,6 +28,8 @@ public class VADD extends Instructions{
 		}
 		
 		for(int i = 0 ; i < vectorLength;i++) {
+			
+			
 			int vectorSum = UnitConverter.binaryStringToInteger(memory.getFromMemory(vector1Address)) +
 					UnitConverter.binaryStringToInteger(memory.getFromMemory(vector2Address));
 			if(vectorSum > Math.pow(2, 6)) {
@@ -66,9 +68,12 @@ public class VADD extends Instructions{
 	@Override
 	public String printMessage() {
 		// TODO Auto-generated method stub
+System.out.println("VADD instruction, FR: " + fr + ", IX: " + ix + ", address: " + address + ", I: " + i + ", vector1: " + vector1Address + " , vector2:" + vector2Address  );
+		
 
-String message = "";
-return message;
+		//String message = "LDR instruction, R: \" + r + \", IX: \" + ix + \", address: \" + address + \", I: \" + i ";
+		return "VADD instruction, FR: " + fr + ", IX: " + ix + ", address: " + address + ", I: " + i + ", vector1: " + vector1Address + " , vector2:" + vector2Address ;
+
 
 	}
 

@@ -12,7 +12,7 @@ public class VSUB extends Instructions{
 		fr = instruction.substring(6,8);
 		ix = instruction.substring(8,10);
 		address = instruction.substring(11);
-	
+		i = instruction.substring(8, 9);
 		String effectiveAddress = instructions.ComputingEffectiveAddress.computeEffectiveAddress(i, ix, address, register,memory);
 		int vectorLength = Integer.parseInt(register.getFloatingRegisterj(fr));
 		if(!i.equals("1")) {
@@ -66,9 +66,12 @@ public class VSUB extends Instructions{
 	@Override
 	public String printMessage() {
 		// TODO Auto-generated method stub
+System.out.println("VSUB instruction, FR: " + fr + ", IX: " + ix + ", address: " + address + ", I: " + i   );
+		
 
-String message = "";
-return message;
+		//String message = "LDR instruction, R: \" + r + \", IX: \" + ix + \", address: \" + address + \", I: \" + i ";
+		return "VSUB instruction, FR: " + fr + ", IX: " + ix + ", address: " + address + ", I: " + i;
+
 
 	}
 

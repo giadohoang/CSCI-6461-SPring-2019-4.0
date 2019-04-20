@@ -1,0 +1,21 @@
+Program IV binaries:
+//Floating point add
+0010110101000111 //set memory 14 this value
+0010110101000111 //set FR0 this value
+1101001010111000 //set set FR1 this value
+1000010100001110 //Execute
+
+//Floating point Subsract
+0010110101000111 //set memory 14 this value
+0010110101000111 //set FR0 this value
+1101001010111000 //set set FR1 this value
+1000100001001110 //Execute
+
+//Vector add
+0000000000000111 //set memory 14 this value
+0000000000000111 //set memory 306 this value
+0000000000000111 //set memory 237 this value
+0000000000010111 //set FR0 this value
+0000000000001001 //set set FR1 this value
+1000110000001110 //Execute
+

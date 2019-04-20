@@ -53,8 +53,12 @@ OVERFLOW may be set
 	@Override
 	public String printMessage() {
 		// TODO Auto-generated method stub
-		String message = "";
-		return message;
+System.out.println("FADD instruction, FR: " + fr + ", IX: " + ix + ", address: " + address + ", I: " + i );
+		
+
+		//String message = "LDR instruction, R: \" + r + \", IX: \" + ix + \", address: \" + address + \", I: \" + i ";
+		return "FADD instruction, FR: " + fr + ", IX: " + ix + ", address: " + address + ", I: " + i;
+
 	}
 
 }

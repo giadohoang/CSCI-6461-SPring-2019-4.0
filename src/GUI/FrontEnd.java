@@ -346,7 +346,8 @@ public class FrontEnd {
 	private JPanel panelR2;
 	private JPanel panelR3;
 	private JPanel panelCUSTOM;
-
+	JPanel panelFR0;
+	JPanel panelFR1;
 	JTextPane textPane_PC;
 	JTextPane textPane_CC;
 	JTextPane textPane_IR;
@@ -370,7 +371,9 @@ public class FrontEnd {
 	private JButton btn_FindProgram1;
 	JButton btn_FindProgram2;
 	JButton btn_StartProgram2;
-	
+	JButton btn_FloatingPoint1;
+	JButton btn_FloatingPoint3;
+	JButton btn_FloatingPoint2;
 
 	/**
 	 * Launch the application.
@@ -439,6 +442,22 @@ public class FrontEnd {
 			public void componentResized(ComponentEvent e) {
 			}
 		});
+		
+		btn_FloatingPoint3 = new JButton("Button 3");
+		btn_FloatingPoint3.setBounds(1315, 707, 113, 23);
+		frmCsciSimulator.getContentPane().add(btn_FloatingPoint3);
+		
+		btn_FloatingPoint1 = new JButton("Button 1");
+		btn_FloatingPoint1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btn_FloatingPoint1.setBounds(1241, 666, 113, 23);
+		frmCsciSimulator.getContentPane().add(btn_FloatingPoint1);
+		
+		btn_FloatingPoint2 = new JButton("Button 2");
+		btn_FloatingPoint2.setBounds(1369, 666, 108, 23);
+		frmCsciSimulator.getContentPane().add(btn_FloatingPoint2);
 		separator_18.setForeground(Color.MAGENTA);
 		separator_18.setBackground(Color.MAGENTA);
 		separator_18.setBounds(1236, 288, 259, 14);
@@ -2040,7 +2059,7 @@ public class FrontEnd {
 		txtpnToRun.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		txtpnToRun.setEditable(false);
 		txtpnToRun.setBackground(new Color(51, 51, 61));
-		txtpnToRun.setBounds(23, 592, 430, 39);
+		txtpnToRun.setBounds(22, 611, 430, 39);
 		frmCsciSimulator.getContentPane().add(txtpnToRun);
 
 		separator_16 = new JSeparator();
@@ -2123,85 +2142,85 @@ public class FrontEnd {
 		lblKeyboard.setBounds(790, 402, 436, 43);
 		frmCsciSimulator.getContentPane().add(lblKeyboard);
 		
-		JPanel panel = new JPanel();
-		panel.addComponentListener(new ComponentAdapter() {
+		panelFR0 = new JPanel();
+		panelFR0.addComponentListener(new ComponentAdapter() {
 			@Override
 			public void componentResized(ComponentEvent e) {
 			}
 		});
-		panel.setLayout(null);
-		panel.setBackground(new Color(51, 51, 61));
-		panel.setBounds(204, 472, 565, 23);
-		frmCsciSimulator.getContentPane().add(panel);
+		panelFR0.setLayout(null);
+		panelFR0.setBackground(new Color(51, 51, 61));
+		panelFR0.setBounds(204, 472, 565, 23);
+		frmCsciSimulator.getContentPane().add(panelFR0);
 		
 		textPane_FR0 = new JTextPane();
 		textPane_FR0.setEditable(false);
 		textPane_FR0.setBounds(411, 0, 144, 23);
-		panel.add(textPane_FR0);
+		panelFR0.add(textPane_FR0);
 		
 		fr0_0 = new JRadioButton("");
 		fr0_0.setBounds(0, 0, 23, 23);
-		panel.add(fr0_0);
+		panelFR0.add(fr0_0);
 		
 		fr0_1 = new JRadioButton("");
 		fr0_1.setBounds(25, 0, 23, 23);
-		panel.add(fr0_1);
+		panelFR0.add(fr0_1);
 		
 		 fr0_2 = new JRadioButton("");
 		fr0_2.setBounds(50, 0, 23, 23);
-		panel.add(fr0_2);
+		panelFR0.add(fr0_2);
 		
 		 fr0_3 = new JRadioButton("");
 		fr0_3.setBounds(75, 0, 23, 23);
-		panel.add(fr0_3);
+		panelFR0.add(fr0_3);
 		
 		 fr0_4 = new JRadioButton("");
 		fr0_4.setBounds(100, 0, 23, 23);
-		panel.add(fr0_4);
+		panelFR0.add(fr0_4);
 		
 		 fr0_5 = new JRadioButton("");
 		fr0_5.setBounds(125, 0, 23, 23);
-		panel.add(fr0_5);
+		panelFR0.add(fr0_5);
 		
 		 fr0_6 = new JRadioButton("");
 		fr0_6.setBounds(150, 0, 23, 23);
-		panel.add(fr0_6);
+		panelFR0.add(fr0_6);
 		
 		 fr0_7 = new JRadioButton("");
 		fr0_7.setBounds(175, 0, 23, 23);
-		panel.add(fr0_7);
+		panelFR0.add(fr0_7);
 		
 		 fr0_8 = new JRadioButton("");
 		fr0_8.setBounds(200, 0, 23, 23);
-		panel.add(fr0_8);
+		panelFR0.add(fr0_8);
 		
 		 fr0_9 = new JRadioButton("");
 		fr0_9.setBounds(225, 0, 23, 23);
-		panel.add(fr0_9);
+		panelFR0.add(fr0_9);
 		
 		 fr0_10 = new JRadioButton("");
 		fr0_10.setBounds(250, 0, 23, 23);
-		panel.add(fr0_10);
+		panelFR0.add(fr0_10);
 		
 		 fr0_11 = new JRadioButton("");
 		fr0_11.setBounds(275, 0, 23, 23);
-		panel.add(fr0_11);
+		panelFR0.add(fr0_11);
 		
 		 fr0_12 = new JRadioButton("");
 		fr0_12.setBounds(300, 0, 23, 23);
-		panel.add(fr0_12);
+		panelFR0.add(fr0_12);
 		
 		 fr0_13 = new JRadioButton("");
 		fr0_13.setBounds(325, 0, 23, 23);
-		panel.add(fr0_13);
+		panelFR0.add(fr0_13);
 		
 		 fr0_14 = new JRadioButton("");
 		fr0_14.setBounds(350, 0, 23, 23);
-		panel.add(fr0_14);
+		panelFR0.add(fr0_14);
 		
 		 fr0_15 = new JRadioButton("");
 		fr0_15.setBounds(375, 0, 23, 23);
-		panel.add(fr0_15);
+		panelFR0.add(fr0_15);
 		
 		 btnFR0 = new JButton("FR0");
 		 btnFR0.addComponentListener(new ComponentAdapter() {
@@ -2216,85 +2235,85 @@ public class FrontEnd {
 		btnFR0.setBounds(109, 472, 89, 23);
 		frmCsciSimulator.getContentPane().add(btnFR0);
 		
-		JPanel panel_1 = new JPanel();
-		panel_1.addComponentListener(new ComponentAdapter() {
+		panelFR1 = new JPanel();
+		panelFR1.addComponentListener(new ComponentAdapter() {
 			@Override
 			public void componentResized(ComponentEvent e) {
 			}
 		});
-		panel_1.setLayout(null);
-		panel_1.setBackground(new Color(51, 51, 61));
-		panel_1.setBounds(204, 515, 565, 23);
-		frmCsciSimulator.getContentPane().add(panel_1);
+		panelFR1.setLayout(null);
+		panelFR1.setBackground(new Color(51, 51, 61));
+		panelFR1.setBounds(204, 515, 565, 23);
+		frmCsciSimulator.getContentPane().add(panelFR1);
 		
 		 textPane_FR1 = new JTextPane();
 		textPane_FR1.setEditable(false);
 		textPane_FR1.setBounds(411, 0, 144, 23);
-		panel_1.add(textPane_FR1);
+		panelFR1.add(textPane_FR1);
 		
 		 fr1_0 = new JRadioButton("");
 		fr1_0.setBounds(0, 0, 23, 23);
-		panel_1.add(fr1_0);
+		panelFR1.add(fr1_0);
 		
 		 fr1_1 = new JRadioButton("");
 		fr1_1.setBounds(25, 0, 23, 23);
-		panel_1.add(fr1_1);
+		panelFR1.add(fr1_1);
 		
 		 fr1_2 = new JRadioButton("");
 		fr1_2.setBounds(50, 0, 23, 23);
-		panel_1.add(fr1_2);
+		panelFR1.add(fr1_2);
 		
 		 fr1_3 = new JRadioButton("");
 		fr1_3.setBounds(75, 0, 23, 23);
-		panel_1.add(fr1_3);
+		panelFR1.add(fr1_3);
 		
 		 fr1_4 = new JRadioButton("");
 		fr1_4.setBounds(100, 0, 23, 23);
-		panel_1.add(fr1_4);
+		panelFR1.add(fr1_4);
 		
 		 fr1_5 = new JRadioButton("");
 		fr1_5.setBounds(125, 0, 23, 23);
-		panel_1.add(fr1_5);
+		panelFR1.add(fr1_5);
 		
 		 fr1_6 = new JRadioButton("");
 		fr1_6.setBounds(150, 0, 23, 23);
-		panel_1.add(fr1_6);
+		panelFR1.add(fr1_6);
 		
 		 fr1_7 = new JRadioButton("");
 		fr1_7.setBounds(175, 0, 23, 23);
-		panel_1.add(fr1_7);
+		panelFR1.add(fr1_7);
 		
 		 fr1_8 = new JRadioButton("");
 		fr1_8.setBounds(200, 0, 23, 23);
-		panel_1.add(fr1_8);
+		panelFR1.add(fr1_8);
 		
 		 fr1_9 = new JRadioButton("");
 		fr1_9.setBounds(225, 0, 23, 23);
-		panel_1.add(fr1_9);
+		panelFR1.add(fr1_9);
 		
 		 fr1_10 = new JRadioButton("");
 		fr1_10.setBounds(250, 0, 23, 23);
-		panel_1.add(fr1_10);
+		panelFR1.add(fr1_10);
 		
 		 fr1_11 = new JRadioButton("");
 		fr1_11.setBounds(275, 0, 23, 23);
-		panel_1.add(fr1_11);
+		panelFR1.add(fr1_11);
 		
 		 fr1_12 = new JRadioButton("");
 		fr1_12.setBounds(300, 0, 23, 23);
-		panel_1.add(fr1_12);
+		panelFR1.add(fr1_12);
 		
 		 fr1_13 = new JRadioButton("");
 		fr1_13.setBounds(325, 0, 23, 23);
-		panel_1.add(fr1_13);
+		panelFR1.add(fr1_13);
 		
 		 fr1_14 = new JRadioButton("");
 		fr1_14.setBounds(350, 0, 23, 23);
-		panel_1.add(fr1_14);
+		panelFR1.add(fr1_14);
 		
 		 fr1_15 = new JRadioButton("");
 		fr1_15.setBounds(375, 0, 23, 23);
-		panel_1.add(fr1_15);
+		panelFR1.add(fr1_15);
 		
 		 btnFR1 = new JButton("FR1");
 		 btnFR1.addComponentListener(new ComponentAdapter() {
@@ -2304,6 +2323,21 @@ public class FrontEnd {
 		 });
 		btnFR1.setBounds(109, 515, 89, 23);
 		frmCsciSimulator.getContentPane().add(btnFR1);
+		
+		JTextPane txtpnFloatingPointProgram = new JTextPane();
+		txtpnFloatingPointProgram.setText("\tFLOATING POINT\r\n\r\nPlease choose:\r\nButton 1: Floating Point add, subtract\r\n\r\nButton 2: Vector add, substract\r\n\r\nButton 3: Floating Point Conversion");
+		txtpnFloatingPointProgram.setForeground(Color.WHITE);
+		txtpnFloatingPointProgram.setFont(new Font("Segoe UI Semibold", Font.PLAIN, 12));
+		txtpnFloatingPointProgram.setEditable(false);
+		txtpnFloatingPointProgram.setBackground(new Color(51, 51, 61));
+		txtpnFloatingPointProgram.setBounds(1241, 523, 236, 207);
+		frmCsciSimulator.getContentPane().add(txtpnFloatingPointProgram);
+		
+		JSeparator separator_12 = new JSeparator();
+		separator_12.setForeground(Color.MAGENTA);
+		separator_12.setBackground(Color.MAGENTA);
+		separator_12.setBounds(1236, 513, 259, 14);
+		frmCsciSimulator.getContentPane().add(separator_12);
 	}
 
 	public void addListeners() {
@@ -2327,6 +2361,8 @@ public class FrontEnd {
 					setActive(panelR1, true);
 					setActive(panelR2, true);
 					setActive(panelR3, true);
+					setActive(panelFR0, true);
+					setActive(panelFR1, true);
 					setActive(panelCUSTOM, true);
 
 					panelActive = true;
@@ -2691,6 +2727,54 @@ public class FrontEnd {
 			}
 
 		});
+		
+		btnFR0.addMouseListener(new MouseAdapter() {
+			public void mousePressed(MouseEvent e) {
+				StringBuffer stringBuffer = new StringBuffer();
+				// for each component in this panel
+				// if it is a radio button
+				// check if the button is clicked or not
+				for (Component component : panelFR0.getComponents()) {
+					if (component instanceof JRadioButton) {
+						JRadioButton jRadioButton = (JRadioButton) component;
+						stringBuffer = jRadioButton.isSelected() ? stringBuffer.append("1") : stringBuffer.append("0");
+
+					}
+				}
+
+				register.setFR0(stringBuffer.toString());
+				System.out.println("Set FR0 = " + register.getFR0());
+				printMessage("Set FR0 = " + register.getFR0());
+				updateText();
+			}
+
+		});
+		
+		
+		btnFR1.addMouseListener(new MouseAdapter() {
+			public void mousePressed(MouseEvent e) {
+				StringBuffer stringBuffer = new StringBuffer();
+				// for each component in this panel
+				// if it is a radio button
+				// check if the button is clicked or not
+				for (Component component : panelFR1.getComponents()) {
+					if (component instanceof JRadioButton) {
+						JRadioButton jRadioButton = (JRadioButton) component;
+						stringBuffer = jRadioButton.isSelected() ? stringBuffer.append("1") : stringBuffer.append("0");
+
+					}
+				}
+
+				register.setFR1(stringBuffer.toString());
+				System.out.println("Set FR1 = " + register.getFR1());
+				printMessage("Set FR1 = " + register.getFR1());
+				updateText();
+			}
+
+		});
+		
+		
+		
 
 		// button CUSTOM is clicked
 		// we loop through the radio button inside panelCUSTOM
@@ -2756,7 +2840,7 @@ public class FrontEnd {
 					program1Active = true;
 					textBox.setText("");
 				}
-
+				updateText();
 			}
 		});
 
@@ -2780,6 +2864,7 @@ public class FrontEnd {
 					result = program1(temp, memory);
 					printMessage("We found: " + result + " is the closest one" + "\n");
 				}
+				updateText();
 			}
 		});
 		
@@ -2797,7 +2882,7 @@ public class FrontEnd {
 				program2.storeParagraph(paragraph, memory);
 				String string = "Please enter a word you would like to find from above paragraph into keyboard below, then hit Find button";
 				printMessage("\n" + string);
-				
+				updateText();
 				//TODO: store into memory the paragraph
 			}
 		});
@@ -2858,12 +2943,59 @@ public class FrontEnd {
 				}
 				
 				System.out.println("18: " + memory.getFromMemory(18) + ", 19: " + memory.getFromMemory(19));
-							
+				updateText();		
 			}
 		});
 		
+		btn_FloatingPoint1.addMouseListener(new MouseAdapter() {
+			public void mousePressed(MouseEvent e) 
+			{
+				printMessage("Floating Point add");
+				memory.setMemory(14, "0010110101000111");
+				register.setFR0("0010110101000111");
+				register.setFR1("1101001010111000");
+				execute("1000010100001110");
+				
+				printMessage("----------------");
+				printMessage("Floating Point Subsract");
+				memory.setMemory(14, "0010110101000111");
+				register.setFR0("0010110101000111");
+				register.setFR1("1101001010111000");
+				execute("1000100001001110");
+				updateText();
+				printMessage("----------------");
+			}
+		});
 		
+		btn_FloatingPoint2.addMouseListener(new MouseAdapter() {
+			public void mousePressed(MouseEvent e) 
+			{
+				printMessage("----------------");
+				printMessage("Vector add");
+				memory.initializeMemory();
+				memory.setMemory(14, "0000000000000111");
+				memory.setMemory(306, "0000000000000111");
+				memory.setMemory(237, "0000000000000111");
+				register.setFR0("0000000000010111");
+				register.setFR1("0000000000001001");
+				execute("1000110000001110");
+				updateText();
+				printMessage("----------------");
+			}
+		});
 		
+	
+		btn_FloatingPoint3.addMouseListener(new MouseAdapter() {
+			public void mousePressed(MouseEvent e) 
+			{
+				printMessage("----------------");
+				printMessage("Floatingpoint conversion");
+				//printMessage("WIP...");
+				execute("1001010000001110");
+				updateText();
+				printMessage("----------------");
+			}
+		});
 
 	}
 
@@ -3079,6 +3211,8 @@ try {
 		textPane_R1.setText(register.getR1());
 		textPane_R2.setText(register.getR2());
 		textPane_R3.setText(register.getR3());
+		textPane_FR0.setText(register.getFR0());
+		textPane_FR1.setText(register.getFR1());
 		onUpdateListener();
 		// textPane_CC.setText(register.getCC());
 

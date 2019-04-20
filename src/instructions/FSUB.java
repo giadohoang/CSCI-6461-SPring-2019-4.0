@@ -45,8 +45,12 @@ public class FSUB extends Instructions{
 	@Override
 	public String printMessage() {
 		// TODO Auto-generated method stub
-		String message = "";
-		return message;
+System.out.println("FSUB instruction, FR: " + fr + ", IX: " + ix + ", address: " + address + ", I: " + i );
+		
+
+		//String message = "LDR instruction, R: \" + r + \", IX: \" + ix + \", address: \" + address + \", I: \" + i ";
+		return "FSUB instruction, FR: " + fr + ", IX: " + ix + ", address: " + address + ", I: " + i;
+
 	}
 
 }

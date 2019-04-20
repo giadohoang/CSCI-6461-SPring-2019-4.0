@@ -1,6 +1,9 @@
 package program;
+import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 
 import instructions.UnitConverter;
@@ -15,7 +18,7 @@ public class Program2 {
 	int wordToFindLength = 0;
 	public String paragraph;
 	public String word;
-	public String readFromFile() {
+	public String readFromFile2() {
 		
 		try {
 			//FileReader file = new FileReader("program2Paragraph");
@@ -34,6 +37,33 @@ public class Program2 {
 			
 		return result.toString();
 	}
+	
+	public String readFromFile() {
+		// String val = "";
+
+	      try {
+	    	  InputStream is = getClass().getResourceAsStream("program2Paragraph-DONOTCHANGE");
+	    	    InputStreamReader isr = new InputStreamReader(is);
+	    	    BufferedReader br = new BufferedReader(isr);
+	    	    String line;
+	    	    while ((line = br.readLine()) != null) 
+	    	    {
+	    	    	result.append(line).append("\n");
+	    	    }
+	    	    br.close();
+	    	    isr.close();
+	    	    is.close();
+	         } 
+	        // i.close();
+	       catch(Exception e) {
+	         System.out.println(e);
+	      }
+	      System.out.println(result.toString());
+			paragraph = result.toString();
+			
+		return result.toString();
+	}
+	
 
 	public void storeWordToFind(String wordToFind, Memory memory) {
 		// TODO Auto-generated method stub

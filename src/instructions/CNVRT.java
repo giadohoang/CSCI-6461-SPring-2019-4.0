@@ -26,13 +26,18 @@ public class CNVRT extends Instructions{
 		else if (fValue ==1) {
 			register.setFloatingRegisterj("00", memory.getFromMemory(UnitConverter.binaryStringToInteger(effectiveAddress)));
 		}
+		
+		register.incrementPC();
 	}
 
 	@Override
 	public String printMessage() {
 		// TODO Auto-generated method stub
-		String message = "";
-		return message;
+		System.out.println("CNVRT instruction, R: " + r + ", IX: " + ix + ", address: " + address + ", I: " + i + ", F: " + F  );
+		
+
+//String message = "LDR instruction, R: \" + r + \", IX: \" + ix + \", address: \" + address + \", I: \" + i ";
+return "CNVRT instruction, R: " + r + ", IX: " + ix + ", address: " + address + ", I: " + i  + ", F: " + F;
 	}
 
 }
