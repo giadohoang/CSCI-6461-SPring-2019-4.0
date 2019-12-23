@@ -1,9 +1,12 @@
 # CSCI-6461-SPring-2019-4.0
-CSCI 6461 SPRING 2019 SIMULATOR version 4.0Design note
+CSCI 6461 SPRING 2019 SIMULATOR version 4.0
+Design note
+
 Team member:
 Paola figuera
 Kun duan
 Gia do
+
 About
 We built this simulator to have a detailed understanding of the internal design of a computer system. This project will give us an opportunity to have a deeper understanding of the design, structure and operations of a computer system, which principally focuses on the ISA and how it is executed. On the first deliverable, we focus on  design and implement the basic machine architecture. This machine will be equipped with a simple memory and designed to execute Load and Store instructions. Additionally, the first delivery will also comes with initial user interface that provides a detailed looks into basic registers inside a computer.
 
@@ -115,10 +118,12 @@ VSUB: Vector Subtract
 CNVRT: Convert to Fixed/ Floating Point
 LDRF: Load Floating Register From Memory
 STFR: Store Floating Register To Memory
+
 Delivery iV: Floating Point Program
 We demonstrated Floating Point Add, Subtract, Vector Add, and Floating Point Conversion on this delivey.
 Each program can be activated through separate buttons as follow:
 Button 1: Floating Add and Subtract program
 Button 2: Vector Add program
 Button 3: Floating Point Conversion program
+
 Thank you!
